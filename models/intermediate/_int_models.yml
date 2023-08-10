@@ -1,0 +1,11 @@
+version: 2
+
+models:
+    - name: int_users_firstletter_split
+      description: "Extracting first letter from the user's first name"
+      columns:
+          - name: id
+            description: "The primary key for the user"
+            tests:
+                - unique
+                - not_null

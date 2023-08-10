@@ -1,0 +1,29 @@
+version: 2
+
+models:
+    - name: fct_users_starting_with_a
+      description: "Users that first name starts with an A"
+      columns:
+          - name: id
+            description: "The primary key for the user"
+            tests:
+                - unique
+                - not_null
+
+    - name: fct_users_starting_with_b
+      description: "Users that first name starts with an B"
+      columns:
+          - name: id
+            description: "The primary key for the user"
+            tests:
+                - unique
+                - not_null
+
+    - name: fct_users_starting_with_c
+      description: "Users that first name starts with an C"
+      columns:
+          - name: id
+            description: "The primary key for the user"
+            tests:
+                - unique
+                - not_null
