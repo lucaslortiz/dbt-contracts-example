@@ -2,13 +2,25 @@ version: 2
 
 models:
     - name: fct_users_starting_with_a
+      config:
+        contract:
+          enforced: true
       description: "Users that first name starts with an A"
       columns:
           - name: id
+            data_type: int
             description: "The primary key for the user"
             tests:
                 - unique
                 - not_null
+          - name: first_letter
+            data_type: string
+          - name: first_name
+            data_type: string
+          - name: last_name
+            data_type: string
+          - name: email
+            data_type: string
 
     - name: fct_users_starting_with_b
       description: "Users that first name starts with an B"
