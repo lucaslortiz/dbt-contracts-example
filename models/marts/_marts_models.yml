@@ -31,6 +31,11 @@ models:
             data_type: string
 
       versions:
+        - v: 3
+          columns:
+            - include: all
+              exclude: [email]
+
         - v: 2
           columns:
             - include: all
@@ -45,6 +50,7 @@ models:
 
     - name: fct_users_starting_with_b
       description: "Users that first name starts with an B"
+      
       columns:
           - name: id
             description: "The primary key for the user"
