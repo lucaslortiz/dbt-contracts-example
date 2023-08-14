@@ -12,9 +12,9 @@ filter_by_first_letter AS (
         first_letter,
         first_name,
         last_name,
-        email
+        email AS email_address
     FROM users_firstletter_split
-    WHERE LOWER(first_letter) = 'c'
+    WHERE LOWER(first_letter) = 'a'
 )
 
 SELECT * FROM filter_by_first_letter
