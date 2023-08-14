@@ -11,8 +11,7 @@ filter_by_first_letter AS (
         id,
         first_letter,
         first_name,
-        last_name,
-        email
+        last_name
     FROM users_firstletter_split
     WHERE LOWER(first_letter) = 'a'
 )
