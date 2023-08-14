@@ -6,13 +6,20 @@ models:
         contract:
           enforced: true
       description: "Users that first name starts with an A"
+      constraints:
+        - type: check
+          columns: [first_name, last_name]
+          expression: "first_name != last_name"
+          name: first_and_last_name_diff_check
       columns:
           - name: id
             data_type: int
             description: "The primary key for the user"
+            constraints:
+              - type: not_null
+             #- type: primary_key # Works on Databricks only if using Unity Catalog (doesn't work for hive_metastore)
             tests:
-                - unique
-                - not_null
+                - unique # actually validate uniqueness for this column
           - name: first_letter
             data_type: string
           - name: first_name
