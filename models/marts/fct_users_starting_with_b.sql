@@ -2,7 +2,7 @@ WITH
 
 -- intermediate
 users_firstletter_split AS (
-    SELECT * FROM {{ ref("int_users_firstletter_split")}}
+    SELECT * FROM {{ ref("int_users_firstletter_split",v='2')}}
 ),
 
 -- filters
@@ -12,7 +12,7 @@ filter_by_first_letter AS (
         first_letter,
         first_name,
         last_name,
-        email
+        email_address
     FROM users_firstletter_split
     WHERE LOWER(first_letter) = 'b'
 )

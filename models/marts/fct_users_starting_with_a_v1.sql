@@ -2,7 +2,7 @@ WITH
 
 -- intermediate
 users_firstletter_split AS (
-    SELECT * FROM {{ ref("int_users_firstletter_split")}}
+    SELECT * FROM {{ ref("int_users_firstletter_split", v='1')}}
 ),
 
 -- filters

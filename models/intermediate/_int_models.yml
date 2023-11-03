@@ -1,11 +1,37 @@
 version: 2
 
 models:
-    - name: int_users_firstletter_split
-      description: "Extracting first letter from the user's first name"
-      columns:
-          - name: id
-            description: "The primary key for the user"
-            tests:
-                - unique
-                - not_null
+  - name: int_users_firstletter_split
+    latest_version: 2
+    description: "Extracting first letter from the user's first name"
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: id
+        data_type: int
+        description: "The primary key for the user"
+        tests:
+          - unique
+          - not_null
+      - name: first_letter
+        data_type: string
+      - name: first_name
+        data_type: string
+      - name: last_name
+        data_type: string
+      - name: email
+        data_type: string
+
+    versions:
+      - v: 2
+        columns:
+          - include: all
+            exclude: [email]
+          - name: email_address
+            data_type: string
+
+      - v: 1
+        deprecation_date: 2023-11-02
+        config:
+          enabled: false
