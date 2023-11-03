@@ -2,8 +2,7 @@ version: 2
 
 models:
   - name: fct_users_starting_with_a
-    deprecation_date: 2023-11-02
-    latest_version: 1
+    latest_version: 2
     config:
       contract:
         enforced: true
@@ -43,10 +42,13 @@ models:
             exclude: [email]
           - name: email_address
             data_type: string
+        deprecation_date: 2024-11-02
 
       - v: 1
         config:
           alias: fct_users_starting_with_a
+          enabled: false
+        deprecation_date: 2023-11-02
 
   - name: fct_users_starting_with_b
     description: "Users that first name starts with an B"
