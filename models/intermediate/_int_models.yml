@@ -33,4 +33,5 @@ models:
 
       - v: 1
         deprecation_date: 2023-11-02
+        enabled: false
 
