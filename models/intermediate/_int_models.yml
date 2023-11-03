@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: int_users_firstletter_split
-    deprecation_date: 2023-11-02
+    deprecation_date: 2023-11-15
     description: "Extracting first letter from the user's first name"
     columns:
       - name: id

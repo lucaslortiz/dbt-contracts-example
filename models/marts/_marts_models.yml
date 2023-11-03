@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: fct_users_starting_with_a
-    deprecation_date: 2023-11-15
+    deprecation_date: 2023-11-02
     latest_version: 1
     config:
       contract:
