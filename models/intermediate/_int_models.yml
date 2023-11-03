@@ -2,8 +2,7 @@ version: 2
 
 models:
   - name: int_users_firstletter_split
-    deprecation_date: 2023-11-15
-    latest_version: 1
+    latest_version: 2
     description: "Extracting first letter from the user's first name"
     config:
       contract:
@@ -33,5 +32,5 @@ models:
             data_type: string
 
       - v: 1
-        config:
-          alias: int_users_firstletter_split
+        deprecation_date: 2023-11-15
+
